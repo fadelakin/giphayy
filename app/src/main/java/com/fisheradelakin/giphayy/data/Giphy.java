@@ -1,4 +1,4 @@
-package com.fisheradelakin.giphayy;
+package com.fisheradelakin.giphayy.data;
 
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;

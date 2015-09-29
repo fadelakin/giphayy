@@ -1,4 +1,4 @@
-package com.fisheradelakin.giphayy;
+package com.fisheradelakin.giphayy.data;
 
 import com.fisheradelakin.giphayy.model.Gif;
 import com.fisheradelakin.giphayy.model.RandomGif;

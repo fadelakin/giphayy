@@ -3,10 +3,12 @@ package com.fisheradelakin.giphayy.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by Fisher on 9/28/15.
  */
-public class Images {
+public class Images implements Serializable {
     @SerializedName("fixed_height")
     @Expose
     public FixedHeight fixedHeight;
