@@ -71,7 +71,7 @@ public class RandomFragment extends Fragment {
             @Override
             public void onResponse(Response<RandomGif> response, Retrofit retrofit) {
                 mRandomGif = response.body();
-                Glide.with(RandomFragment.this).load(mRandomGif.getData().getImageUrl()).asGif().into(mRandomGifImageView);
+                Glide.with(RandomFragment.this).load(mRandomGif.getData().getFixedWidthDownsampledUrl()).asGif().into(mRandomGifImageView);
 
                 if (mSwipeRefreshLayout.isRefreshing()) {
                     mSwipeRefreshLayout.setRefreshing(false);

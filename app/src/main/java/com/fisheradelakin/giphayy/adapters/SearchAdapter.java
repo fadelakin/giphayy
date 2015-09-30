@@ -39,7 +39,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder holder, int position) {
         Datum datum = mDatumList.get(position);
         holder.mProgressView.startAnimation();
-        Glide.with(mContext).load(datum.getImages().fixedHeight.getUrl()).asGif().into(holder.mGif);
+        Glide.with(mContext).load(datum.getImages().getFixedWidthDownsampled().getUrl()).asGif().into(holder.mGif);
     }
 
     @Override

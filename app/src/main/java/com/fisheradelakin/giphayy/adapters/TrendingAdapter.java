@@ -39,7 +39,7 @@ public class TrendingAdapter extends RecyclerView.Adapter<TrendingAdapter.ViewHo
     public void onBindViewHolder(ViewHolder holder, int position) {
         Datum datum = mData.get(position);
         holder.mProgressView.startAnimation();
-        Glide.with(mContext).load(datum.getImages().fixedHeight.getUrl()).asGif().into(holder.mGif);
+        Glide.with(mContext).load(datum.getImages().getFixedWidthDownsampled().getUrl()).asGif().into(holder.mGif);
     }
 
     @Override

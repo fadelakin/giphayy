@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Log.i(TAG, "Whoo!");
                 RandomGif randomGif = response.body();
                 Glide.with(MainActivity.this)
-                        .load(randomGif.getData().getImageUrl())
+                        .load(randomGif.getData().getFixedWidthDownsampledUrl())
                         .into(mDrawerHeader);
             }
 
