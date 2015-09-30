@@ -31,5 +31,6 @@ public interface GiphyService {
     Call<RandomGif> getRandomGif(@Query("api_key") String apiKey);
 
     // get a list of gifs from trending section of giphy
+    @GET("trending")
     Call<Gif> getTrendingGifs(@Query("api_key") String apiKey);
 }
