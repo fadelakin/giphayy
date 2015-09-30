@@ -11,23 +11,40 @@
         android:layout_height="40dp"
         app:cpv_indeterminate="true"
         app:cpv_color="@color/colorPrimary"
-        android:layout_gravity="center"/>
+        android:layout_centerInParent="true"/>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/textAndIcons"
-        android:text="Random"/>
+        android:text="@string/swipe_down"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textAppearance="?android:textAppearanceMedium"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textAndIcons"
+        android:text="@string/tap_to_view"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:textAppearance="?android:textAppearanceMedium"/>
 
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true">
 
         <ImageView
-            android:layout_width="500dp"
-            android:layout_height="500dp"
+            android:id="@+id/random_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:contentDescription="@string/random_gif"/>
 
     </android.support.v4.widget.SwipeRefreshLayout>
