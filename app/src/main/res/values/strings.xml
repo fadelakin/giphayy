@@ -16,4 +16,6 @@
     <string name="swipe_down">Swipe down to get a new gif</string>
     <string name="tap_to_view">Tap gif to share it.</string>
     <string name="trending_gif_content_desc">a trending gif</string>
+    <string name="title_activity_overlay">OverlayActivity</string>
+    <string name="exit">X</string>
 </resources>

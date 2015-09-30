@@ -6,4 +6,5 @@ package com.fisheradelakin.giphayy;
 public class Constants {
 
     public static final String PUBLIC_BETA_KEY = "dc6zaTOxFJmzC";
+    public static final String GIF_SERIALIZABLE_KEY = "Gif";
 }

@@ -7,6 +7,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -19,7 +21,10 @@ import com.fisheradelakin.giphayy.R;
 import com.fisheradelakin.giphayy.data.Giphy;
 import com.fisheradelakin.giphayy.data.GiphyService;
 import com.fisheradelakin.giphayy.model.Gif;
+import com.github.rahatarmanahmed.cpv.CircularProgressView;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
@@ -30,10 +35,13 @@ public class SearchActivity extends AppCompatActivity {
 
     private SearchView mSearchView;
 
+    @Bind(R.id.search_recyclerview) RecyclerView mSearchRecyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        ButterKnife.bind(this);
 
         overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
 
@@ -60,6 +68,9 @@ public class SearchActivity extends AppCompatActivity {
         if(mSearchView != null) {
             mSearchView.setQuery(query, false);
         }
+
+        mSearchRecyclerView.setHasFixedSize(true);
+        mSearchRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
@@ -108,6 +119,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onResponse(Response<Gif> response, Retrofit retrofit) {
                 Log.i(TAG, "Whoo");
+
             }
 
             @Override

@@ -13,4 +13,9 @@
     tools:showIn="@layout/activity_search"
     tools:context="com.fisheradelakin.giphayy.ui.SearchActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </RelativeLayout>

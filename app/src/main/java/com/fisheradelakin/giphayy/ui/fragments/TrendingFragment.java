@@ -4,6 +4,7 @@ package com.fisheradelakin.giphayy.ui.fragments;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,7 +31,6 @@ public class TrendingFragment extends Fragment {
 
     public static final String TAG = "TrendingFragment";
 
-    @Bind(R.id.progress_view) CircularProgressView mProgressView;
     @Bind(R.id.trending_recyclerview) RecyclerView mRecyclerView;
 
     public TrendingFragment() {
@@ -44,9 +44,7 @@ public class TrendingFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_trending, container, false);
         ButterKnife.bind(this, v);
 
-        mProgressView.startAnimation();
-
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.setHasFixedSize(true);
 
         Giphy giphy = new Giphy();
